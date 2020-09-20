@@ -76,8 +76,7 @@ console.log(
 [Run in CodeSandbox](https://codesandbox.io/s/exciting-cloud-d4141?file=/src/index.ts)
 
 ```js
-import {either, function} from 'fp-ts'
-import {flow} from 'fp-ts/function'
+import {either} from 'fp-ts'
 import {letAnything} from '@fakenickels/let-anything'
 
 // You could say I'm not a very good with TS types, I'm more of a ReasonML guy so help would be appreciated!
@@ -202,7 +201,7 @@ async function findOne(id) {
 Now we can create a monadic context with `let-anything` and behold the power of FP with async/await easy to understand syntax!
 
 ```js
-import {either, pipe} from 'fp-ts'
+import {either} from 'fp-ts'
 import {letAnything} from '@fakenickels/let-anything'
 
 // You could say I'm not a very good with TS types, I'm more of a ReasonML guy so help would be appreciated!
