@@ -86,10 +86,10 @@ import {letAnything} from '@fakenickels/let-anything'
 const letEither = letAnything<either.Either<any, any>>({
   let_: (value, continuation) => {
     return value.then(eitherValue => {
-      return flow(
-        either.map(continuation),
-        either.getOrElse(error => Promise.resolve(either.left(error))),
-      )(eitherValue)
+      return either.fold(
+        error => Promise.resolve(either.left(error)),
+        continuation,
+      (eitherValue)
     })
   }
 });
@@ -208,12 +208,12 @@ import {letAnything} from '@fakenickels/let-anything'
 // You could say I'm not a very good with TS types, I'm more of a ReasonML guy so help would be appreciated!
 
 // Here we'll provide the context to combine both Either and Promises together
-const letAsyncEither = letAnything<either.Either<any, any>>({
+const letAsyncEither = letAnything<Promise<either.Either<any, any>>>({
   let_: (value, continuation) => {
     return value.then(eitherValue => {
-      return flow(
-        either.map(continuation),
-        either.getOrElse(error => Promise.resolve(either.left(error))),
+      return either.fold(
+        error => Promise.resolve(either.left(error)),
+        continuation,
       )(eitherValue)
     })
   }
