@@ -16,7 +16,7 @@ yarn add @fakenickels/let-anything
 <details>
   <summary>Show async/await demo</summary>
 
-[Run in CodeSandbox](https://codesandbox.io/s/wizardly-hopper-n1n1f?file=/src/index.ts)
+[Run in CodeSandbox](https://codesandbox.io/s/modern-hill-z8lrc?file=/src/index.ts)
 
 ```js
 import { letAnything } from "@fakenickels/let-anything";
