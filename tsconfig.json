@@ -4,7 +4,7 @@
     "target": "es5",
     "module": "commonjs",
     "lib": ["ES2018", "DOM"],
-    "rootDirs": [ "./src", "./tests" ],
+    "rootDirs": ["./src", "./tests"],
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,

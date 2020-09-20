@@ -3,9 +3,12 @@
   "version": "0.0.2",
   "main": "src/index.js",
   "license": "MIT",
-  "typings": "src/index.ts",
+  "typings": "src/index.d.ts",
   "devDependencies": {
     "fp-ts": "^2.8.2",
     "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "build": "tsc --declaration"
   }
 }
