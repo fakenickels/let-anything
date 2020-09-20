@@ -6,7 +6,7 @@
 It allows you to create monadic syntax for all sorts of monad-y values, heavily inspired by [OCaml's shiny new syntax](https://jobjo.github.io/2019/04/24/ocaml-has-some-new-shiny-syntax.html) and the name is inspired by [Jared's let-anything](https://github.com/jaredly/let-anything)
 
 
-# Instalation
+# Installation
 ```
 yarn add @fakenickels/let-anything
 ```
