@@ -1,6 +1,6 @@
 {
   "name": "@fakenickels/let-anything",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "main": "src/index.js",
   "license": "MIT",
   "typings": "src/index.d.ts",
