@@ -19,21 +19,19 @@ yarn add @fakenickels/let-anything
 [Run in CodeSandbox](https://codesandbox.io/s/wizardly-hopper-n1n1f?file=/src/index.ts)
 
 ```js
-import {letAnything} from '@fakenickels/let-anything';
+import { letAnything } from "@fakenickels/let-anything";
 
 // define a context, in this case we are creating our own async-await!
-const letPromise = letAnything({
-  let_: (value, continuation) => value.then(continuation),
+const letPromise = letAnything<Promise<any>>({
+  let_: (value, continuation) => value.then(continuation)
 });
 
-async function main() {
-  const userName = yield Promise.resolve("Subaru-kun")
-  const deathCount = yield Promise.resolve(12909238409382)
+letPromise(function* () {
+  const userName = yield Promise.resolve("Subaru-kun");
+  const deathCount = yield Promise.resolve(12909238409382);
 
-  return Promise.resolve(`User ${userName} has a death count of ${deathCount}`)
-}
-
-letPromise(main).then(console.log).catch(console.log)
+  return Promise.resolve(`User ${userName} has a death count of ${deathCount}`);
+}).then(console.log).catch(console.log)
 // User Subaru-kun has a death count of 12909238409382
 ```
 
