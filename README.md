@@ -230,7 +230,7 @@ function* checkoutPurchase({productId, userId}) {
   return Promise.resolve(either.right({success: true}))
 }
 
-letAsyncEither(either)
+letAsyncEither(checkoutPurchase)
   // we just got the error handling out of the way!
   .then(either.getOrElse(error => {
     switch(error.type) {
